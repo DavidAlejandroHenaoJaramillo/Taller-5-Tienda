@@ -9,8 +9,8 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-
-<VBox alignment="CENTER" prefHeight="502.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.taller5.controllers.ClientesController">
+<VBox alignment="CENTER" prefHeight="404.0" prefWidth="450.0" style="-fx-border-color: black;" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="com.example.taller5.controllers.ClientesController">
    <children>
       <AnchorPane prefHeight="502.0" prefWidth="600.0">
          <children>
@@ -27,13 +27,13 @@
             <Label layoutX="52.0" layoutY="118.0" text="Nombre:" />
             <Label layoutX="52.0" layoutY="158.0" text="Teléfono:" />
             <Label layoutX="52.0" layoutY="197.0" text="Correo:" />
-            <Button fx:id="btnAgregar" layoutX="495.0" layoutY="74.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="78.0" text="AGREGAR" />
-            <Button fx:id="btnEliminar" layoutX="495.0" layoutY="124.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="78.0" text="ELIMINAR" />
-            <Button fx:id="btnModificar" layoutX="490.0" layoutY="177.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="88.0" text="MODIFICAR" />
-            <TableView layoutX="10.0" layoutY="251.0" prefHeight="200.0" prefWidth="579.0">
+            <Button fx:id="btnAgregar" layoutX="495.0" layoutY="74.0" mnemonicParsing="false" onAction="#agregarClientes" prefHeight="31.0" prefWidth="78.0" text="AGREGAR" />
+            <Button fx:id="btnEliminar" layoutX="495.0" layoutY="124.0" mnemonicParsing="false" onAction="#eliminarClientes" prefHeight="31.0" prefWidth="78.0" text="ELIMINAR" />
+            <Button fx:id="btnModificar" layoutX="490.0" layoutY="177.0" mnemonicParsing="false" onAction="#modificarClientes" prefHeight="31.0" prefWidth="88.0" text="MODIFICAR" />
+            <TableView fx:id="tableClientes" layoutX="10.0" layoutY="251.0" prefHeight="200.0" prefWidth="579.0">
               <columns>
                 <TableColumn fx:id="colId" prefWidth="101.5999755859375" text="ID" />
-                <TableColumn fx:id="ColNombre" prefWidth="144.7999267578125" text="Nombre" />
+                <TableColumn fx:id="colNombre" prefWidth="144.7999267578125" text="Nombre" />
                   <TableColumn fx:id="colTelefono" prefWidth="151.2000732421875" text="Télefono" />
                   <TableColumn fx:id="colCorreo" prefWidth="178.40008544921875" text="Correo" />
               </columns>

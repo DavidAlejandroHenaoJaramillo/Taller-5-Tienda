@@ -9,9 +9,9 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<VBox alignment="CENTER" style="-fx-background-color: #8C9686;" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.taller5.controllers.DashboardController">
+<VBox alignment="CENTER" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #8C9686; -fx-border-color: black;" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.taller5.controllers.DashboardController">
    <children>
-      <AnchorPane>
+      <AnchorPane style="-fx-border-color: black;">
          <children>
             <BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity">
                <left>
@@ -33,17 +33,17 @@
                            <children>
                               <AnchorPane prefHeight="264.0" prefWidth="178.0">
                                  <children>
-                                    <Button fx:id="btnClientes" alignment="CENTER" layoutX="20.0" layoutY="28.0" mnemonicParsing="false" prefHeight="48.0" prefWidth="137.0" style="-fx-border-radius: 20; -fx-background-color: #1C421F; -fx-border-color: black; -fx-background-radius: 30;" text="Clientes" textFill="#fafafa">
+                                    <Button fx:id="btnClientes" alignment="CENTER" layoutX="20.0" layoutY="28.0" mnemonicParsing="false" onAction="#cargarClientes" prefHeight="48.0" prefWidth="137.0" style="-fx-border-radius: 20; -fx-background-color: #1C421F; -fx-border-color: black; -fx-background-radius: 30;" text="Clientes" textFill="#fafafa">
                                        <font>
                                           <Font name="Berlin Sans FB" size="13.5" />
                                        </font>
                                     </Button>
-                                    <Button fx:id="btnProductos" alignment="CENTER" layoutX="20.0" layoutY="91.0" mnemonicParsing="false" prefHeight="48.0" prefWidth="137.0" style="-fx-border-radius: 20; -fx-background-color: #1C421F; -fx-border-color: black; -fx-background-radius: 20;" text="Productos" textFill="#fafafa">
+                                    <Button fx:id="btnProductos" alignment="CENTER" layoutX="20.0" layoutY="91.0" mnemonicParsing="false" onAction="#cargarProductos" prefHeight="48.0" prefWidth="137.0" style="-fx-border-radius: 20; -fx-background-color: #1C421F; -fx-border-color: black; -fx-background-radius: 20;" text="Productos" textFill="#fafafa">
                                        <font>
                                           <Font name="Berlin Sans FB" size="13.5" />
                                        </font>
                                     </Button>
-                                    <Button fx:id="btnVentas" alignment="CENTER" layoutX="20.0" layoutY="150.0" mnemonicParsing="false" prefHeight="48.0" prefWidth="137.0" style="-fx-border-radius: 20; -fx-background-color: #1C421F; -fx-border-color: black; -fx-background-radius: 20;" text="Ventas" textFill="#fafafa">
+                                    <Button fx:id="btnVentas" alignment="CENTER" layoutX="20.0" layoutY="150.0" mnemonicParsing="false" onAction="#cargarVentas" prefHeight="48.0" prefWidth="137.0" style="-fx-border-radius: 20; -fx-background-color: #1C421F; -fx-border-color: black; -fx-background-radius: 20;" text="Ventas" textFill="#fafafa">
                                        <font>
                                           <Font name="Berlin Sans FB" size="13.5" />
                                        </font>
@@ -56,7 +56,7 @@
                   </VBox>
                </left>
                <center>
-                  <AnchorPane prefHeight="404.0" prefWidth="450.0" BorderPane.alignment="CENTER">
+                  <AnchorPane fx:id="layout" prefHeight="404.0" prefWidth="450.0" BorderPane.alignment="CENTER">
                      <children>
                         <HBox layoutX="134.0" layoutY="20.0" />
                         <Label layoutX="126.0" layoutY="20.0" text="Seleccione una opción">
