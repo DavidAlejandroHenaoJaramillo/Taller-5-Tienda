@@ -1,6 +1,7 @@
 package com.example.taller5.app;
 
-import javafx.application.Application;
+import
+        javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.stage.Stage;

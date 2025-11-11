@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.control.Label?>
-<?import javafx.scene.control.MenuItem?>
 <?import javafx.scene.control.Spinner?>
-<?import javafx.scene.control.SplitMenuButton?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.layout.AnchorPane?>
@@ -24,34 +23,24 @@
             <Label layoutX="52.0" layoutY="118.0" text="Cliente:" />
             <Label layoutX="52.0" layoutY="158.0" text="Producto:" />
             <Label layoutX="52.0" layoutY="197.0" text="Cantidad:" />
-            <Button fx:id="btnVender" layoutX="425.0" layoutY="71.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="78.0" text="VENDER" />
-            <TableView layoutX="10.0" layoutY="251.0" prefHeight="216.0" prefWidth="579.0">
+            <Button fx:id="btnVender" layoutX="425.0" layoutY="71.0" mnemonicParsing="false" onAction="#venderProducto" prefHeight="31.0" prefWidth="78.0" text="VENDER" />
+            <TableView fx:id="tableVentas" layoutX="10.0" layoutY="251.0" prefHeight="216.0" prefWidth="579.0">
                <columns>
-                  <TableColumn fx:id="colCodigo" prefWidth="101.5999755859375" text="Fecha" />
-                  <TableColumn fx:id="ColNombreProducto" prefWidth="144.7999267578125" text="Cliente" />
-                  <TableColumn fx:id="colPrecio" prefWidth="173.5999755859375" text="Producto" />
-                  <TableColumn fx:id="colStock" prefWidth="73.60003662109375" text="Cantidad" />
-                  <TableColumn prefWidth="85.5999755859375" text="Subtotal" />
+                  <TableColumn fx:id="colFecha" prefWidth="101.5999755859375" text="Fecha" />
+                  <TableColumn fx:id="colClienteVenta" prefWidth="144.7999267578125" text="Cliente" />
+                  <TableColumn fx:id="colProductoVenta" prefWidth="173.5999755859375" text="Producto" />
+                  <TableColumn fx:id="colCantidad" prefWidth="73.60003662109375" text="Cantidad" />
+                  <TableColumn fx:id="colSubtotal" prefWidth="85.5999755859375" text="Subtotal" />
                </columns>
             </TableView>
-            <Label layoutX="126.0" layoutY="78.0" text="(Fecha actual)" />
-            <Spinner layoutX="124.0" layoutY="193.0" prefHeight="26.0" prefWidth="206.0" />
-            <SplitMenuButton layoutX="124.0" layoutY="154.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="206.0" text="Seleccione el producto">
-              <items>
-                <MenuItem mnemonicParsing="false" text="Action 1" />
-                <MenuItem mnemonicParsing="false" text="Action 2" />
-              </items>
-            </SplitMenuButton>
-            <SplitMenuButton layoutX="124.0" layoutY="113.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="206.0" text="Seleccione el cliente">
-               <items>
-                  <MenuItem mnemonicParsing="false" text="Action 1" />
-                  <MenuItem mnemonicParsing="false" text="Action 2" />
-               </items>
-            </SplitMenuButton>
+            <Label fx:id="lblFecha" layoutX="126.0" layoutY="78.0" text="(Fecha actual)" />
+            <Spinner fx:id="spnCantidad" layoutX="124.0" layoutY="193.0" prefHeight="26.0" prefWidth="206.0" />
             <Label layoutX="382.0" layoutY="130.0" text="PRECIO:" />
-            <Label fx:id="txtTotal" layoutX="486.0" layoutY="130.0" text="(Total)" />
+            <Label fx:id="lblTotal" layoutX="486.0" layoutY="130.0" text="(Total)" />
             <Label layoutX="382.0" layoutY="171.0" text="SUBTOTAL" />
-            <Label fx:id="txtSubTotal" layoutX="464.0" layoutY="171.0" text="(Precio*cantidad)" />
+            <Label fx:id="lblSubtotal" layoutX="464.0" layoutY="171.0" text="(Precio*cantidad)" />
+            <ComboBox fx:id="cmbCliente" layoutX="124.0" layoutY="114.0" prefHeight="26.0" prefWidth="206.0" promptText="Seleccione el cliente" />
+            <ComboBox fx:id="cmbProducto" layoutX="124.0" layoutY="153.0" prefHeight="26.0" prefWidth="206.0" promptText="Seleccione el producto" />
          </children>
       </AnchorPane>
    </children>

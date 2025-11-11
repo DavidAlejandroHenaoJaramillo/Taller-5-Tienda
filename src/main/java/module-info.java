@@ -2,6 +2,9 @@ module com.example.taller5 {
     requires javafx.controls;
     requires javafx.fxml;
 
+    requires javafx.base;
+
+
     exports com.example.taller5.app;
     opens com.example.taller5.app to javafx.fxml;
 

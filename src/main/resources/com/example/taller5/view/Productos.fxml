@@ -29,10 +29,10 @@
             <Button fx:id="btnAgregarProducto" layoutX="495.0" layoutY="74.0" mnemonicParsing="false" onAction="#agregarProductos" prefHeight="31.0" prefWidth="78.0" text="AGREGAR" />
             <Button fx:id="btnEliminarProducto" layoutX="495.0" layoutY="124.0" mnemonicParsing="false" onAction="#eliminarProductos" prefHeight="31.0" prefWidth="78.0" text="ELIMINAR" />
             <Button fx:id="btnModificarProducto" layoutX="490.0" layoutY="177.0" mnemonicParsing="false" onAction="#modificarProductos" prefHeight="31.0" prefWidth="88.0" text="MODIFICAR" />
-            <TableView layoutX="10.0" layoutY="251.0" prefHeight="216.0" prefWidth="579.0">
+            <TableView fx:id="tableProductos" layoutX="10.0" layoutY="251.0" prefHeight="216.0" prefWidth="579.0">
                <columns>
                   <TableColumn fx:id="colCodigo" prefWidth="101.5999755859375" text="Código" />
-                  <TableColumn fx:id="ColNombreProducto" prefWidth="144.7999267578125" text="Nombre" />
+                  <TableColumn fx:id="colNombreProducto" prefWidth="144.7999267578125" text="Nombre" />
                   <TableColumn fx:id="colPrecio" prefWidth="151.2000732421875" text="Precio" />
                   <TableColumn fx:id="colStock" prefWidth="178.40008544921875" text="Stock" />
                </columns>
